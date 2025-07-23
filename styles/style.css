@@ -1,0 +1,93 @@
+/* common style */
+/* google-fonts */
+.noto-serif-font {
+  font-family: "Noto Serif", serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+}
+.inter-font {
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+/* container */
+.container {
+  max-width: 1280px;
+  margin: auto;
+}
+.bg-color {
+  background: #f5f8ff;
+}
+/* custom style */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 20px;
+}
+.nav-menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.nav-links {
+  display: flex;
+  list-style: none;
+  gap: 40px;
+}
+.nav-links li a {
+  text-decoration: none;
+}
+a {
+  color: #8987a1;
+  font-size: 1.2rem;
+  font-weight: 500;
+  line-height: 24px;
+  transition: 0.5s ease;
+}
+.active {
+  color: black;
+  font-weight: 700;
+  line-height: 24px;
+}
+a:hover {
+  color: #252432;
+  cursor: pointer;
+}
+.cart {
+  color: #000000;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 1.2rem;
+  margin-left: 40px;
+}
+.cart-icon:hover {
+  transform: scale(1.5);
+  color: #8987a1;
+  transition: 0.5s ease;
+}
+
+/* Responsive Design - Media Queries */
+/* mobile */
+@media only screen and (max-width: 576px) {
+  .container {
+    margin: 10px;
+  }
+  .nav-links {
+    display: none;
+  }
+  .logo img {
+    height: 40px;
+  }
+  .cart {
+    font-size: 1rem;
+  }
+}
