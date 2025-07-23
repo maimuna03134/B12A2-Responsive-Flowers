@@ -80,6 +80,7 @@ a:hover {
     justify-content: space-between;
     align-items: center;
     margin: 100px auto;
+    padding: 12px 20px;
 }
 .banner-left {
     flex: 1;
@@ -114,6 +115,7 @@ a:hover {
   .container {
     margin: 10px;
   }
+  /* navbar */
   .nav-links {
     display: none;
   }
@@ -122,5 +124,19 @@ a:hover {
   }
   .cart {
     font-size: 1rem;
+  }
+
+  /* banner */
+  .banner{
+    flex-direction: column-reverse;
+  }
+  .banner-left h2 {
+    font-size: 2rem;
+    line-height: 40px;
+    margin: 15px 0;
+  }
+  .banner-left p{
+    width: 100%;
+    font-size: 14px;
   }
 }
