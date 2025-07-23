@@ -74,6 +74,39 @@ a:hover {
   color: #8987a1;
   transition: 0.5s ease;
 }
+/* banner */
+.banner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 100px auto;
+}
+.banner-left {
+    flex: 1;
+}
+.banner-left h2 {
+  font-size: 4rem;
+  font-weight: 700;
+  line-height: 89px;
+  text-transform: uppercase;
+}
+.banner-left span {
+  color: #e95a08;
+}
+.banner-left p {
+  color: #00000080;
+  font-size: 1.3rem;
+  font-weight: 400;
+  line-height: 27px;
+  width: 75%;
+}
+.banner-right{
+    flex: 1;
+}
+.banner-right img{
+    width: 100%;
+}
+
 
 /* Responsive Design - Media Queries */
 /* mobile */
