@@ -28,7 +28,17 @@
 .text-center {
   text-align: center;
 }
-
+.primary-btn {
+  color: rgb(255, 255, 255);
+  font-weight: 600;
+  line-height: 19px;
+  padding: 20px 50px;
+  background-color: #e95a08;
+  border: none;
+}
+img {
+  width: 100%;
+}
 /* custom style */
 .navbar {
   display: flex;
@@ -61,7 +71,7 @@ a {
   font-weight: 700;
   line-height: 24px;
 }
-a:hover {
+a:hover, .cart-amount:hover {
   color: #252432;
   cursor: pointer;
 }
@@ -96,7 +106,8 @@ a:hover {
   line-height: 89px;
   text-transform: uppercase;
 }
-.banner-left span, .about-card span {
+.banner-left span,
+.about-card span {
   color: #e95a08;
 }
 .banner-left p {
@@ -110,10 +121,11 @@ a:hover {
 .banner-right {
   flex: 1;
 }
-.banner-right img {
+.banner-right {
   width: 100%;
 }
 /* card style */
+
 .about-card {
   margin-bottom: 50px;
 }
@@ -128,6 +140,25 @@ a:hover {
   font-weight: 400;
   line-height: 27px;
   padding: 15px 140px;
+}
+/* cards */
+.cards {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+.card {
+  font-size: 1.6rem;
+  font-weight: 500;
+  line-height: 150%;
+}
+.card h4 {
+  font-weight: bold;
+  margin-top: 20px;
+}
+.card .primary-btn {
+  width: 100%;
+  margin: 30px 0;
 }
 
 /* Responsive Design - Media Queries */
@@ -146,7 +177,6 @@ a:hover {
   }
   .cart {
     font-size: 1rem;
-
   }
 
   /* banner */
@@ -168,5 +198,22 @@ a:hover {
     font-size: 14px;
     line-height: 17px;
     padding: 0;
+  }
+
+  .cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .card {
+    font-size: 1rem;
+    line-height: 150%;  
+  }
+  .card h4{
+    margin-top: 10px;
+  }
+  .card .primary-btn {
+    font-size: 14px;
+    font-weight: 500;
+    padding: 10px 20px;
+    margin: 20px 0;
   }
 }
