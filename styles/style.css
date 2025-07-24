@@ -25,6 +25,10 @@
 .bg-color {
   background: #f5f8ff;
 }
+.text-center {
+  text-align: center;
+}
+
 /* custom style */
 .navbar {
   display: flex;
@@ -76,14 +80,15 @@ a:hover {
 }
 /* banner */
 .banner {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin: 100px auto;
-    padding: 12px 20px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 100px auto;
+  padding: 12px 20px;
 }
 .banner-left {
-    flex: 1;
+  flex: 1;
 }
 .banner-left h2 {
   font-size: 4rem;
@@ -91,7 +96,7 @@ a:hover {
   line-height: 89px;
   text-transform: uppercase;
 }
-.banner-left span {
+.banner-left span, .about-card span {
   color: #e95a08;
 }
 .banner-left p {
@@ -99,15 +104,31 @@ a:hover {
   font-size: 1.3rem;
   font-weight: 400;
   line-height: 27px;
-  width: 75%;
+  margin: 10px 0;
+  width: 70%;
 }
-.banner-right{
-    flex: 1;
+.banner-right {
+  flex: 1;
 }
-.banner-right img{
-    width: 100%;
+.banner-right img {
+  width: 100%;
 }
-
+/* card style */
+.about-card {
+  margin-bottom: 50px;
+}
+.about-card h2 {
+  font-size: 3rem;
+  font-weight: 700;
+  line-height: 68px;
+}
+.about-card p {
+  color: rgba(0, 0, 0, 0.5);
+  font-size: 1.6rem;
+  font-weight: 400;
+  line-height: 27px;
+  padding: 15px 140px;
+}
 
 /* Responsive Design - Media Queries */
 /* mobile */
@@ -118,25 +139,34 @@ a:hover {
   /* navbar */
   .nav-links {
     display: none;
+    flex-direction: column-reverse;
   }
   .logo img {
     height: 40px;
   }
   .cart {
     font-size: 1rem;
+
   }
 
   /* banner */
-  .banner{
+  .banner {
     flex-direction: column-reverse;
   }
-  .banner-left h2 {
+  .banner-left h2,
+  .about-card h2 {
     font-size: 2rem;
     line-height: 40px;
     margin: 15px 0;
   }
-  .banner-left p{
+  .banner-left p {
     width: 100%;
     font-size: 14px;
+    line-height: 17px;
+  }
+  .about-card p {
+    font-size: 14px;
+    line-height: 17px;
+    padding: 0;
   }
 }
