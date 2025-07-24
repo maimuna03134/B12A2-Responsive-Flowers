@@ -108,12 +108,13 @@ a:hover,
   text-transform: uppercase;
 }
 .banner-left span,
-.about-card span {
+.about-card span,
+.latest-deal-section span {
   color: #e95a08;
 }
 .banner-left p {
   color: #00000080;
-  font-size: 1.3rem;
+  font-size: 1.6rem;
   font-weight: 400;
   line-height: 27px;
   margin: 10px 0;
@@ -182,8 +183,8 @@ a:hover,
 .plants-lover-left .badge-image {
   position: absolute;
   top: -15%;
-  right: -12%;
-  width: 200px;
+  right: -15%;
+  width: 250px;
   z-index: 2;
 }
 .plants-lover-right {
