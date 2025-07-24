@@ -130,20 +130,23 @@ a:hover,
 .card-details {
   margin: 100px auto;
 }
-.about-card {
+.about-card,.latest-deal-section {
   margin-bottom: 50px;
 }
-.about-card h2 {
+.about-card h2,
+.latest-deal-section h2 {
   font-size: 3rem;
   font-weight: 700;
   line-height: 68px;
+  margin-bottom: 15px;
 }
-.about-card p {
+.about-card p,
+.latest-deal-section p {
   color: rgba(0, 0, 0, 0.5);
   font-size: 1.6rem;
   font-weight: 400;
   line-height: 27px;
-  padding: 15px 140px;
+  /* padding: 15px 140px; */
 }
 /* cards style */
 .cards {
@@ -204,9 +207,9 @@ a:hover,
   font-size: 1.6rem;
   font-weight: 400;
   line-height: 27px;
-  list-style-type: disc;
   margin-bottom: 20px;
 }
+/* Latest Deal Section style */
 
 /* Responsive Design - Media Queries */
 /* mobile */
@@ -233,7 +236,8 @@ a:hover,
   }
   .banner-left h2,
   .about-card h2,
-  .plants-lover-right h2 {
+  .plants-lover-right h2,
+  .latest-deal-section h2 {
     font-size: 1.8rem;
     line-height: 40px;
     margin: 15px 0;
@@ -245,7 +249,8 @@ a:hover,
   }
   /* Plants Section */
   .about-card p,
-  .plants-lover-right ul li {
+  .plants-lover-right ul li,
+  .latest-deal-section p {
     font-size: 14px;
     line-height: 17px;
     padding: 0;
@@ -276,7 +281,7 @@ a:hover,
   .plants-lover-right {
     width: 100%;
   }
-  .plants-lover-right h2 .break {
+  .plants-lover-right h2 .break, .about-card p .break, .latest-deal-section p .break {
     display: none;
   }
   .badge-image {
