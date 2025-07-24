@@ -71,7 +71,8 @@ a {
   font-weight: 700;
   line-height: 24px;
 }
-a:hover, .cart-amount:hover {
+a:hover,
+.cart-amount:hover {
   color: #252432;
   cursor: pointer;
 }
@@ -124,8 +125,10 @@ a:hover, .cart-amount:hover {
 .banner-right {
   width: 100%;
 }
-/* card style */
-
+/* Plants Section style */
+.card-details {
+  margin: 100px auto;
+}
 .about-card {
   margin-bottom: 50px;
 }
@@ -141,7 +144,7 @@ a:hover, .cart-amount:hover {
   line-height: 27px;
   padding: 15px 140px;
 }
-/* cards */
+/* cards style */
 .cards {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -160,10 +163,53 @@ a:hover, .cart-amount:hover {
   width: 100%;
   margin: 30px 0;
 }
+/*  Plants Lover Section  */
+.plants-lover {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 60px;
+  margin: 100px auto;
+}
+.plants-lover-left {
+  position: relative;
+  flex: 1.5;
+}
+.plants-lover-left .main-image {
+  border-radius: 10px;
+  display: block;
+}
+.plants-lover-left .badge-image {
+  position: absolute;
+  top: -15%;
+  right: -12%;
+  width: 200px;
+  z-index: 2;
+}
+.plants-lover-right {
+  flex: 2;
+}
+.plants-lover-right h2 {
+  font-size: 3rem;
+  font-weight: 700;
+  line-height: 68px;
+  margin-bottom: 20px;
+}
+.plants-lover-right ul {
+  padding: 0 30px;
+}
+.plants-lover-right ul li {
+  color: #00000080;
+  font-size: 1.6rem;
+  font-weight: 400;
+  line-height: 27px;
+  list-style-type: disc;
+  margin-bottom: 20px;
+}
 
 /* Responsive Design - Media Queries */
 /* mobile */
-@media only screen and (max-width: 576px) {
+@media only screen and (max-width: 600px) {
   .container {
     margin: 10px;
   }
@@ -185,8 +231,9 @@ a:hover, .cart-amount:hover {
     margin-bottom: 60px;
   }
   .banner-left h2,
-  .about-card h2 {
-    font-size: 2rem;
+  .about-card h2,
+  .plants-lover-right h2 {
+    font-size: 1.8rem;
     line-height: 40px;
     margin: 15px 0;
   }
@@ -195,20 +242,22 @@ a:hover, .cart-amount:hover {
     font-size: 14px;
     line-height: 17px;
   }
-  .about-card p {
+  /* Plants Section */
+  .about-card p,
+  .plants-lover-right ul li {
     font-size: 14px;
     line-height: 17px;
     padding: 0;
+    margin: 10px 0;
   }
-
   .cards {
     grid-template-columns: repeat(2, 1fr);
   }
   .card {
     font-size: 1rem;
-    line-height: 150%;  
+    line-height: 150%;
   }
-  .card h4{
+  .card h4 {
     margin-top: 10px;
   }
   .card .primary-btn {
@@ -216,5 +265,20 @@ a:hover, .cart-amount:hover {
     font-weight: 500;
     padding: 10px 20px;
     margin: 20px 0;
+  }
+  /* plants lover */
+  .plants-lover {
+    flex-direction: column;
+    gap: 5px;
+  }
+  .plants-lover-left,
+  .plants-lover-right {
+    width: 100%;
+  }
+  .plants-lover-right h2 .break {
+    display: none;
+  }
+  .badge-image {
+    display: none;
   }
 }
