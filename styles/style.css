@@ -182,6 +182,7 @@ a:hover, .cart-amount:hover {
   /* banner */
   .banner {
     flex-direction: column-reverse;
+    margin-bottom: 60px;
   }
   .banner-left h2,
   .about-card h2 {
