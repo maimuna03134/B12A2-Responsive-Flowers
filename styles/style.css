@@ -35,6 +35,7 @@
   padding: 20px 50px;
   background-color: #e95a08;
   border: none;
+  cursor: pointer;
 }
 img {
   width: 100%;
@@ -126,22 +127,24 @@ a:hover,
   width: 100%;
 }
 /* Plants Section style */
-.card-details {
+.card-details,
+.latest-deal-section {
   margin: 100px auto;
 }
 .about-card,
-.latest-deal-section {
+.latest-deal-section-content {
   margin-bottom: 50px;
 }
 .about-card h2,
-.latest-deal-section h2 {
+.latest-deal-section-content h2,
+.join-section h3 {
   font-size: 3rem;
   font-weight: 700;
   line-height: 68px;
   margin-bottom: 15px;
 }
 .about-card p,
-.latest-deal-section p {
+.latest-deal-section-content p {
   color: rgba(0, 0, 0, 0.5);
   font-size: 1.6rem;
   font-weight: 400;
@@ -268,11 +271,40 @@ a:hover,
   grid-row: 2;
 }
 .right {
-  background: linear-gradient(rgba(0, 0, 0, 0.4)),
+  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
     url("../assets/deal-zabo.png") no-repeat;
   background-size: cover;
   background-position: center;
   grid-row: 1 / span 2;
+}
+/* Join Section style */
+.join-section {
+  background: linear-gradient(#07334f66, #07334f66),
+    url(../assets/news-letter-bg.png);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 500px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.join-section h3 {
+  color: white;
+}
+.form-group {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+.join-section input {
+  width: 640px;
+  padding: 15px 20px;
+  color: rgba(0, 0, 0, 0.5);
+  border: none;
+  /* flex: 1; */
+  font-size: 16px;
 }
 
 /* Responsive Design - Media Queries */
@@ -288,13 +320,12 @@ a:hover,
     align-items: center;
     padding: 12px 10px;
   }
-  .nav-menu{
+  .nav-menu {
     display: flex;
     align-items: center;
   }
   .nav-links {
     display: none;
-    /* flex-direction: column-reverse; */
   }
   .logo img {
     height: 40px;
@@ -313,8 +344,9 @@ a:hover,
   .banner-left h2,
   .about-card h2,
   .plants-lover-right h2,
-  .latest-deal-section h2 {
-    font-size: 1.8rem;
+  .latest-deal-section-content h2,
+  .join-section h3 {
+    font-size: 1.5rem;
     line-height: 40px;
     margin: 15px 0;
   }
@@ -326,7 +358,7 @@ a:hover,
   /* Plants Section */
   .about-card p,
   .plants-lover-right ul li,
-  .latest-deal-section p {
+  .latest-deal-section-content p {
     font-size: 14px;
     line-height: 17px;
     padding: 0;
@@ -342,7 +374,7 @@ a:hover,
   .card h4 {
     margin-top: 10px;
   }
-  .card .primary-btn {
+  .primary-btn {
     font-size: 14px;
     font-weight: 500;
     padding: 10px 20px;
@@ -359,7 +391,7 @@ a:hover,
   }
   .plants-lover-right h2 .break,
   .about-card p .break,
-  .latest-deal-section p .break {
+  .latest-deal-section-content p .break {
     display: none;
   }
   .badge-image {
@@ -385,5 +417,21 @@ a:hover,
   .right h4 {
     font-size: 1.4rem;
     line-height: 27px;
+  }
+  /* Join Section */
+  .join-section{
+    height:300px ;
+    margin: 50px 0;
+  }
+  .join-section .form-group{
+    flex-direction: column;
+    align-items: center;
+  }
+  .join-section input{
+    width: 100%;
+    padding: 10px 15px;
+  }
+  .join-section .primary-btn{
+    width: 50%;
   }
 }
