@@ -283,7 +283,7 @@ a:hover,
     margin: 10px;
   }
   /* navbar */
-  .navbar{
+  .navbar {
     width: 100%;
   }
   .nav-links {
@@ -294,8 +294,9 @@ a:hover,
     height: 40px;
   }
   .cart {
-    font-size: 1rem;
-    padding: 7px 0;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
   }
 
   /* banner */
