@@ -130,7 +130,8 @@ a:hover,
 .card-details {
   margin: 100px auto;
 }
-.about-card,.latest-deal-section {
+.about-card,
+.latest-deal-section {
   margin-bottom: 50px;
 }
 .about-card h2,
@@ -210,12 +211,76 @@ a:hover,
   margin-bottom: 20px;
 }
 /* Latest Deal Section style */
+.latest-deal-section-container {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 20px;
+  border-radius: 10px;
+  height: 500px;
+}
+.box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 15px;
+}
+.box h4 {
+  color: white;
+  font-size: 1.4rem;
+  font-weight: 700;
+  line-height: 27px;
+}
+.right h4 {
+  font-size: 2.3rem;
+  font-weight: 700;
+  line-height: 50px;
+}
+.box a {
+  color: white;
+  margin-top: 10px;
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 19px;
+  transition: 0.3s;
+}
+.box a:hover {
+  background-color: white;
+  color: black;
+  border: 2px solid black;
+  border-radius: 5px;
+  padding: 8px 15px;
+}
+.left-top {
+  background: linear-gradient(rgba(0, 0, 0, 0.4)),
+    url("../assets/deal-bloom.png") no-repeat;
+  background-size: cover;
+  background-position: center;
+  grid-column: 1;
+  grid-row: 1;
+}
+.left-bottom {
+  background: linear-gradient(rgba(0, 0, 0, 0.4)),
+    url("../assets/deal-ana.png") no-repeat;
+  background-size: cover;
+  background-position: center;
+  grid-column: 1;
+  grid-row: 2;
+}
+.right {
+  background: linear-gradient(rgba(0, 0, 0, 0.4)),
+    url("../assets/deal-zabo.png") no-repeat;
+  background-size: cover;
+  background-position: center;
+  grid-row: 1 / span 2;
+}
 
 /* Responsive Design - Media Queries */
 /* mobile */
 @media only screen and (max-width: 600px) {
   .container {
-    margin: 10px;
+    margin: 15px;
   }
   /* navbar */
   .nav-links {
@@ -281,10 +346,33 @@ a:hover,
   .plants-lover-right {
     width: 100%;
   }
-  .plants-lover-right h2 .break, .about-card p .break, .latest-deal-section p .break {
+  .plants-lover-right h2 .break,
+  .about-card p .break,
+  .latest-deal-section p .break {
     display: none;
   }
   .badge-image {
     display: none;
+  }
+  /*Challenges Part
+  Latest Deal Section*/
+  .latest-deal-section-container {
+    display: flex;
+    flex-direction: column;
+    height: auto;
+  }
+  .box {
+    width: 100%;
+    height: 300px;
+  }
+  .left-top,
+  .left-bottom,
+  .right {
+    grid-column: auto;
+    grid-row: auto;
+  }
+  .right h4 {
+    font-size: 1.4rem;
+    line-height: 27px;
   }
 }
