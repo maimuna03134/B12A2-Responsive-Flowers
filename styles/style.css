@@ -36,6 +36,12 @@
   background-color: #e95a08;
   border: none;
   cursor: pointer;
+  transition: all 0.5s;
+}
+.primary-btn:hover {
+  background-color: white;
+  color: #e95a08;
+  border: 2px solid #e95a08;
 }
 img {
   width: 100%;
@@ -97,6 +103,7 @@ a:hover,
   align-items: center;
   margin: 100px auto;
   padding: 12px 20px;
+  animation: banner-animation 1.5s ease-out forwards;
 }
 .banner-left {
   flex: 1;
@@ -125,6 +132,9 @@ a:hover,
 }
 .banner-right {
   width: 100%;
+}
+.banner-right img{
+  animation: banner-image-animation 4s alternate-reverse infinite;
 }
 /* Plants Section style */
 .card-details,
@@ -162,6 +172,12 @@ a:hover,
   font-size: 1.6rem;
   font-weight: 500;
   line-height: 150%;
+}
+.card img {
+  transition: all 0.5s;
+}
+.card img:hover {
+  transform: scale(0.9);
 }
 .card h4 {
   font-weight: bold;
@@ -312,7 +328,7 @@ a:hover,
   display: grid;
   grid-template-columns: auto auto auto auto;
   gap: 2rem;
-  padding: 50px 0;
+  padding-bottom: 50px;
 }
 .sec-1 img {
   width: 120px;
@@ -364,6 +380,54 @@ a:hover,
 }
 .footer-icon img:hover {
   transform: translateY(-5px);
+}
+
+/* Apply Animation to Trusted Plant Lover Badge */
+.spin-badge {
+  animation: spin 5s linear infinite;
+  transform-origin: center center;
+}
+
+/* Animation Keyframes for banner*/
+@keyframes banner-animation{
+  0%{
+    opacity: 0;
+    color: white;
+    transform: translateX(-20px);
+  }
+  50%{
+    opacity: 0.5;
+    color: #8987a1;
+    transform: translateX(-10px);
+  }
+  100%{
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}
+@keyframes banner-image-animation{
+  0%{
+    opacity: 0.3;
+    transform: translateX(-20px);
+  }
+  50%{
+    opacity: 0.7;
+    transform: translateX(-10px);
+  }
+  100%{
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}
+
+/* Animation Keyframes for Trusted Plant Lover Badge*/
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }
 
 /* Responsive Design - Media Queries */
